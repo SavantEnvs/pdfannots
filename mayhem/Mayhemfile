@@ -1,0 +1,10 @@
+project: savantenvs/pdfannots
+target: annot-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/annot-fuzz/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_pdf
+    libfuzzer: true
+    timeout: 20

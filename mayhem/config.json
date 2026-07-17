@@ -1,0 +1,8 @@
+{
+  "spec_version": 2,
+  "upstream_default_branch": "main",
+  "lang": "python",
+  "fuzz_engine": "atheris",
+  "oss_fuzz": false,
+  "notes": "Pure-Python Atheris harness. The Mayhem target is a thin ELF launcher (mayhem/launcher.c) that execs python3 on the harness, because Mayhem requires an ELF target. One target: annot-fuzz (the original mayhemheroes harness mayhem/fuzz_pdf.py, which drives pdfannots.process_file over fuzzed PDF bytes). The behavioral oracle (mayhem/pdfannots_oracle) is likewise an ELF launcher so the anti-reward-hack sabotage check can neuter it; it asserts known-answer annotation extraction over tests/issue9.pdf + tests/issue46.pdf."
+}
